@@ -38,6 +38,8 @@
     "typescript": "^5.0.2"
   },
   "dependencies": {
+    "@storybook/addons": "^6.5.16",
+    "@storybook/theming": "^6.5.16",
     "@types/jss": "^10.0.0",
     "@types/react-jss": "^10.0.0",
     "jss": "^10.10.0",
