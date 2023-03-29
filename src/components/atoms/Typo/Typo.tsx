@@ -1,13 +1,13 @@
 import React, { FC } from 'react';
+import { ThemeTypes } from '../../../types/theme';
 import { useTypoStyles } from './typo-styles';
 
-export type typoTheme = 'light' | 'dark';
 export type typoVariants = 'title' | 'subtitle' | 'content' | 'helperText';
 
 export interface TypoProps {
   variant?: typoVariants;
   children?: React.ReactNode;
-  theme?: typoTheme;
+  theme?: ThemeTypes;
 }
 
 const Typo: FC<TypoProps> = ({ variant, children, theme }) => {

@@ -1,10 +1,6 @@
-import { Classes } from 'jss';
 import { createUseStyles } from 'react-jss';
 import '../../../styles/global.css';
 import { TypoProps } from './Typo';
-
-export type TypoClassNames = 'typoBase';
-export type TypoClasses = Classes<TypoClassNames>;
 
 const useTypoStyles = createUseStyles({
   typoBase: {

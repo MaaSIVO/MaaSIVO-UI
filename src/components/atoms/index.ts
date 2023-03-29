@@ -1,3 +1,4 @@
 import Typo from './Typo';
+import Icon from './Icon';
 
-export { Typo };
+export { Typo, Icon };
