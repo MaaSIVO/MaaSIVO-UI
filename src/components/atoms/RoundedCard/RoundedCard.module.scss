@@ -1,0 +1,21 @@
+@import '../../../styles/global.scss';
+
+.baseCard {
+  display: flex;
+  overflow: hidden;
+  @include baseCard;
+  width: max-content;
+  position: relative;
+  border-radius: 100%;
+  background: white;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  padding: $px30;
+}
+
+.title {
+  padding-bottom: $px20;
+  white-space: normal;
+}
