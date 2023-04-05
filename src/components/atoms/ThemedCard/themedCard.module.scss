@@ -1,0 +1,26 @@
+@import '../../../styles/global.scss';
+
+.baseCard {
+  @include baseCard;
+  background: linear-gradient(298.01deg, rgba(0, 93, 99, 0.48) 0%, rgba(120, 234, 255, 0.04) 100%);
+  padding: $px10;
+}
+
+.innerCard {
+  padding: $px20;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: $px10;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.bordered {
+  border: $px1 solid rgba(120, 255, 236, 0.5);
+  background: linear-gradient(102.21deg, rgba(120, 255, 236, 0.1) 23.95%, rgba(0, 0, 0, 0) 100%);
+}
+
+.title {
+  margin-bottom: $px20;
+}

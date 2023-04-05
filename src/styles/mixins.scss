@@ -1,0 +1,14 @@
+@mixin themeColorText {
+  background: linear-gradient(90deg, #9f2fff 0%, #0bb1d3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@mixin baseCard {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: $white-shadow;
+}

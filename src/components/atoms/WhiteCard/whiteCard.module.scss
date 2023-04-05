@@ -1,0 +1,7 @@
+@import '../../../styles/global.scss';
+
+.baseCard {
+  @include baseCard;
+  background: white;
+  padding: $px30;
+}

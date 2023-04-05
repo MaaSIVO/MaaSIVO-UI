@@ -1,19 +1,25 @@
 import React, { FC } from 'react';
-import { ThemeTypes } from '../../../types/theme';
-import { useTypoStyles } from './typo-styles';
+import { TypoThemeTypes } from '../../../types/theme';
+import { Base } from '../../../types/base';
+import styles from './typo.module.scss';
 
 export type typoVariants = 'title' | 'subtitle' | 'content' | 'helperText';
 
-export interface TypoProps {
+export interface TypoProps extends Base {
   variant?: typoVariants;
   children?: React.ReactNode;
-  theme?: ThemeTypes;
+  theme?: TypoThemeTypes;
 }
 
-const Typo: FC<TypoProps> = ({ variant, children, theme }) => {
-  const styles = useTypoStyles({ variant, theme });
-
-  return <p className={[styles.typoBase, styles.typoStyle].join(' ')}>{children}</p>;
+const Typo: FC<TypoProps> = ({ variant, children, theme, className, style }) => {
+  return (
+    <p
+      className={[styles[variant ?? 'content'], styles[theme ?? 'light'], className].join(' ')}
+      style={style}
+    >
+      {children}
+    </p>
+  );
 };
 
 export default Typo;

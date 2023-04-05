@@ -9,7 +9,8 @@ const Idea2: FC<SVGProps<SVGSVGElement>> = (props) => {
       viewBox="0 0 30 30"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}>
+      {...props}
+    >
       <g clipPath="url(#clip0_139_274)">
         <path
           d="M30 15.3574C29.4667 15.9827 28.76 16.1787 27.9814 16.1907C27.2027 16.2027 26.4307 16.2121 25.6574 16.1907C24.7334 16.1601 24.2227 15.6574 24.2454 14.8667C24.2654 14.1294 24.7374 13.7334 25.656 13.7201C26.608 13.7054 27.5614 13.7201 28.5134 13.7134C29.1294 13.7134 29.64 13.9081 30 14.4281V15.3574Z"
@@ -55,7 +56,8 @@ const Idea2: FC<SVGProps<SVGSVGElement>> = (props) => {
           y1="14.9584"
           x2="30"
           y2="14.9584"
-          gradientUnits="userSpaceOnUse">
+          gradientUnits="userSpaceOnUse"
+        >
           <CustomDef />
         </linearGradient>
         <linearGradient
@@ -64,7 +66,8 @@ const Idea2: FC<SVGProps<SVGSVGElement>> = (props) => {
           y1="14.9686"
           x2="5.75958"
           y2="14.9686"
-          gradientUnits="userSpaceOnUse">
+          gradientUnits="userSpaceOnUse"
+        >
           <CustomDef />
         </linearGradient>
         <linearGradient
@@ -73,7 +76,8 @@ const Idea2: FC<SVGProps<SVGSVGElement>> = (props) => {
           y1="16.1415"
           x2="21.7588"
           y2="16.1415"
-          gradientUnits="userSpaceOnUse">
+          gradientUnits="userSpaceOnUse"
+        >
           <CustomDef />
         </linearGradient>
         <linearGradient
@@ -82,7 +86,8 @@ const Idea2: FC<SVGProps<SVGSVGElement>> = (props) => {
           y1="27.5052"
           x2="18.4257"
           y2="27.5052"
-          gradientUnits="userSpaceOnUse">
+          gradientUnits="userSpaceOnUse"
+        >
           <CustomDef />
         </linearGradient>
         <linearGradient
@@ -91,7 +96,8 @@ const Idea2: FC<SVGProps<SVGSVGElement>> = (props) => {
           y1="23.4732"
           x2="25.8823"
           y2="23.4732"
-          gradientUnits="userSpaceOnUse">
+          gradientUnits="userSpaceOnUse"
+        >
           <CustomDef />
         </linearGradient>
         <linearGradient
@@ -100,7 +106,8 @@ const Idea2: FC<SVGProps<SVGSVGElement>> = (props) => {
           y1="2.88338"
           x2="16.3124"
           y2="2.88338"
-          gradientUnits="userSpaceOnUse">
+          gradientUnits="userSpaceOnUse"
+        >
           <CustomDef />
         </linearGradient>
         <linearGradient
@@ -109,7 +116,8 @@ const Idea2: FC<SVGProps<SVGSVGElement>> = (props) => {
           y1="23.484"
           x2="8.81463"
           y2="23.484"
-          gradientUnits="userSpaceOnUse">
+          gradientUnits="userSpaceOnUse"
+        >
           <CustomDef />
         </linearGradient>
         <linearGradient
@@ -118,7 +126,8 @@ const Idea2: FC<SVGProps<SVGSVGElement>> = (props) => {
           y1="6.41699"
           x2="8.79656"
           y2="6.41699"
-          gradientUnits="userSpaceOnUse">
+          gradientUnits="userSpaceOnUse"
+        >
           <CustomDef />
         </linearGradient>
         <linearGradient
@@ -127,7 +136,8 @@ const Idea2: FC<SVGProps<SVGSVGElement>> = (props) => {
           y1="6.42215"
           x2="25.8722"
           y2="6.42215"
-          gradientUnits="userSpaceOnUse">
+          gradientUnits="userSpaceOnUse"
+        >
           <CustomDef />
         </linearGradient>
         <clipPath id="clip0_139_274">

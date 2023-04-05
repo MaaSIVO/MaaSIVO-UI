@@ -21,6 +21,7 @@ const Template: ComponentStory<typeof Typo> = (args) => (
   >
     <Typo {...args} />
     <Typo {...args} theme="dark" />
+    <Typo {...args} theme="themedColor" />
   </div>
 );
 
