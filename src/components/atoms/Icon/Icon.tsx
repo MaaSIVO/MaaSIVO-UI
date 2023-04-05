@@ -7,7 +7,7 @@ import Typo from '../Typo';
 import styles from './icon.module.scss';
 
 export interface IconProps extends Base {
-  size?: number;
+  size?: number | string;
   name: IconOptions;
   theme?: IconThemeTypes;
   color?: string;

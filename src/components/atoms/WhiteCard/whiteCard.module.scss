@@ -1,7 +1,13 @@
 @import '../../../styles/global.scss';
 
 .baseCard {
+  display: flex;
+  padding: $px30;
   @include baseCard;
   background: white;
-  padding: $px30;
+  flex-direction: column;
+}
+
+.title {
+  margin-bottom: $px20;
 }

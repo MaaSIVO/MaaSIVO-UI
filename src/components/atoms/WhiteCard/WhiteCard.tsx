@@ -1,21 +1,17 @@
 import React, { CSSProperties, FC, ReactNode } from 'react';
 import Typo from '../Typo';
 import { Base } from '../../../types/base';
-import Icon, { IconProps } from '../Icon/Icon';
-import styles from './whiteCard.module.scss';
+import styles from './WhiteCard.module.scss';
 
 export interface WhiteCardProps extends Base {
   title?: string;
-  icon?: IconProps;
   children?: ReactNode;
   contentClassName?: string;
   contentStyle?: CSSProperties;
-  theme?: '';
   align?: 'left' | 'right' | 'center' | 'justify';
 }
 
 const WhiteCard: FC<WhiteCardProps> = ({
-  icon,
   align,
   title,
   style,
@@ -26,8 +22,19 @@ const WhiteCard: FC<WhiteCardProps> = ({
 }) => {
   return (
     <div className={[styles.baseCard, className].join(' ')} style={style}>
-      {icon && <Icon {...icon} />}
-      {children}
+      {title && (
+        <Typo
+          variant="subtitle"
+          theme="themedColor"
+          className={styles.title}
+          style={{ textAlign: align }}
+        >
+          {title}
+        </Typo>
+      )}
+      <div className={contentClassName} style={{ ...contentStyle, textAlign: align }}>
+        <Typo theme="themedColor">{children}</Typo>
+      </div>
     </div>
   );
 };
@@ -36,6 +43,5 @@ export default WhiteCard;
 WhiteCard.defaultProps = {
   children: undefined,
   title: undefined,
-  icon: undefined,
   align: 'right'
 };

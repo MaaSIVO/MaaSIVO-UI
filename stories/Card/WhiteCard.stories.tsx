@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { WhiteCard, Typo } from '../../src/components';
+import { Typo, WhiteCard } from '../../src/components';
 
 export default {
   title: 'Cards/White',
@@ -8,9 +8,6 @@ export default {
   argTypes: {
     title: {
       type: 'string'
-    },
-    bordered: {
-      type: 'boolean'
     },
     align: {
       options: ['left', 'right', 'center', 'justify'],
@@ -32,7 +29,7 @@ const Template: ComponentStory<typeof WhiteCard> = (args) => (
     }}
   >
     <WhiteCard {...args}>
-      <Typo theme="dark">
+      <Typo>
         Card Example Card Example Card Example Card Example Card Example Card Example Card Example
         Card Example Card Example Card añlsk sñldkañlxda Example Card Example Card Example Card
         Example Card Example aojsclskxmañl Card Example Card Example Card Example Card Example Card
@@ -42,17 +39,8 @@ const Template: ComponentStory<typeof WhiteCard> = (args) => (
   </div>
 );
 
-export const Default = Template.bind({});
-export const Rounded = Template.bind({});
+export const Basic = Template.bind({});
 
-Default.args = {
-  bordered: false,
-  title: 'Card Title',
-  align: 'justify'
-};
-
-Rounded.args = {
-  bordered: false,
-  title: 'Card Title',
-  align: 'justify'
+Basic.args = {
+  title: 'Colaboration'
 };
