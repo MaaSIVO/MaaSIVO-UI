@@ -1,6 +1,6 @@
 import React, { CSSProperties, FC, ReactNode } from 'react';
-import Typo from '../Typo';
-import { Base } from '../../../types/base';
+import { Typo } from '../../../atoms';
+import { Base } from '../../../../types/base';
 import styles from './themedCard.module.scss';
 
 export interface ThemedCardProps extends Base {

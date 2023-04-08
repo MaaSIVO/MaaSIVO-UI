@@ -1,7 +1,7 @@
 import React, { CSSProperties, FC, ReactNode } from 'react';
-import Typo from '../Typo';
-import { Base } from '../../../types/base';
-import styles from './WhiteCard.module.scss';
+import { Typo } from '../../../atoms';
+import { Base } from '../../../../types/base';
+import styles from './whiteCard.module.scss';
 
 export interface WhiteCardProps extends Base {
   title?: string;
