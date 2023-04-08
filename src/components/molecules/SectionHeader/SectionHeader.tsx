@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Typo } from '../../atoms';
+import { Divider, Typo } from '../../atoms';
 import { Base } from '../../../types/base';
 import styles from './sectionHeader.module.scss';
 
@@ -15,6 +15,8 @@ const SectionHeader: FC<SectionHeaderProps> = ({ align, title, style, className 
       style={style}
     >
       <Typo variant="title">{title}</Typo>
+      <Divider width="90%" />
+      <Divider width="80%" />
     </div>
   );
 };

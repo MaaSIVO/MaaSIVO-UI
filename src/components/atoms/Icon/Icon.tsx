@@ -7,13 +7,14 @@ import Typo from '../Typo';
 import styles from './icon.module.scss';
 
 export interface IconProps extends Base {
-  size?: number | string;
-  name: IconOptions;
-  theme?: IconThemeTypes;
   color?: string;
+  name: IconOptions;
+  onClick?: () => void;
+  size?: number | string;
+  theme?: IconThemeTypes;
 }
 
-const Icon: FC<IconProps> = ({ name, size, theme, className, style }) => {
+const Icon: FC<IconProps> = ({ name, size, theme, className, style, onClick }) => {
   const IconComponent = Icons[name];
 
   const colorTheme = {
@@ -22,13 +23,9 @@ const Icon: FC<IconProps> = ({ name, size, theme, className, style }) => {
   };
 
   return IconComponent ? (
-    <IconComponent
-      width={size}
-      height={size}
-      color={colorTheme[theme ?? 'light']}
-      className={className}
-      style={style}
-    />
+    <button onClick={onClick} className={className} style={style}>
+      <IconComponent width={size} height={size} color={colorTheme[theme ?? 'light']} />
+    </button>
   ) : (
     <div className={styles.emptyIcon} style={{ width: size, height: size }}>
       <Typo theme="dark">?</Typo>

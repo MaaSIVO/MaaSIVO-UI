@@ -17,7 +17,6 @@ const RoundedCard: FC<RoundedCardProps> = ({ icon, title, style, className }) =>
   useEffect(() => {
     if (divRef.current) {
       const divWidth = divRef.current.offsetWidth;
-      console.log('Width:', divWidth);
       setCardWidth(divWidth);
     }
   }, [divRef.current?.offsetWidth]);
