@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useRef, useState } from 'react';
-import Typo from '../Typo';
-import { Base } from '../../../types/base';
-import Icon, { IconProps } from '../Icon/Icon';
+import Typo from '../../../atoms/Typo';
+import { Base } from '../../../../types/base';
+import Icon, { IconProps } from '../../../atoms/Icon/Icon';
 import styles from './RoundedCard.module.scss';
 
 export interface RoundedCardProps extends Base {
