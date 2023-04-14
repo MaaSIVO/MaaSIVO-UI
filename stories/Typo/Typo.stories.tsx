@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Typo } from '../../src/components';
 
 export default {
-  title: 'Typo',
+  title: 'Basics/Typo',
   component: Typo
 } as ComponentMeta<typeof Typo>;
 

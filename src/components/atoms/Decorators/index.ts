@@ -1,3 +1,3 @@
 import Divider from './Divider';
-
-export { Divider };
+import ShapeIndicator from './ShapeIndicator';
+export { Divider, ShapeIndicator };

@@ -36,6 +36,6 @@ const Icon: FC<IconProps> = ({ name, size, theme, className, style, onClick }) =
 export default Icon;
 
 Icon.defaultProps = {
-  size: 20,
+  size: '100%',
   theme: 'light'
 };
