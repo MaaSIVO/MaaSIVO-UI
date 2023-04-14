@@ -20,4 +20,5 @@ export type IconOptions =
   | 'Scooter'
   | 'Settings'
   | 'Sustentabillity'
+  | 'LinearIndicator'
   | 'Work';

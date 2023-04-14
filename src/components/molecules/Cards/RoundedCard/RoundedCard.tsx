@@ -17,18 +17,16 @@ const RoundedCard: FC<RoundedCardProps> = ({ icon, title, style, className }) =>
   useEffect(() => {
     if (divRef.current) {
       const divWidth = divRef.current.offsetWidth;
-      console.log('Width:', divWidth);
       setCardWidth(divWidth);
     }
-  }, [divRef.current?.offsetWidth]);
-
+  }, []);
   return (
     <div
       ref={divRef}
       className={[styles.baseCard, className].join(' ')}
-      style={{ height: cardWidth, ...style }}
+      style={{ height: cardWidth, maxHeight: cardWidth, ...style }}
     >
-      {icon && <Icon {...icon} size="100%" />}
+      {icon && <Icon {...icon} />}
       {title && (
         <Typo theme="themedColor" className={styles.title}>
           {title}

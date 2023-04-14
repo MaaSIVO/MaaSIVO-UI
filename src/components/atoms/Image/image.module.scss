@@ -1,0 +1,51 @@
+@import '../../../styles/global.scss';
+
+.container {
+  overflow: hidden;
+  position: relative;
+}
+
+.bordered {
+  border-radius: $px10;
+}
+
+.shadow {
+  box-shadow: $white-shadow;
+}
+
+.blurBase {
+  background-color: black;
+  position: absolute;
+}
+
+.topBlur {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.bottomBlur {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+
+.leftBlur {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+
+.rightBlur {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+}

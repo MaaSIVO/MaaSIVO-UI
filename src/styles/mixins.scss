@@ -12,3 +12,16 @@
   border-radius: 10px;
   box-shadow: $white-shadow;
 }
+
+@mixin centerRow($align: center, $justify: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin centerColumn($align: center, $justify: center) {
+  display: flex;
+  align-items: $align;
+  flex-direction: column;
+  justify-content: $justify;
+}

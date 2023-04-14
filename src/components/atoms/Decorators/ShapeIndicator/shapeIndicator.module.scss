@@ -1,0 +1,35 @@
+@import '../../../../styles/global.scss';
+
+.indicatorContainer {
+  position: relative;
+  transform: translate(-$px15, -$px10);
+  width: 100%;
+}
+.indicatorLine {
+  border-bottom: 2px solid white;
+  border-left: 3px solid white;
+  height: $px30;
+  transform: skewX(30deg);
+}
+.indicatorCircle {
+  height: $px15;
+  width: $px15;
+  border-radius: $px15;
+  background: white;
+}
+.circleLeft {
+  top: 0;
+  left: 0;
+  transform: translate(-100%, -50%);
+  position: absolute;
+}
+.circleRight {
+  bottom: 0;
+  right: 0;
+  transform: translate(100%, calc(50% - 2px));
+  position: absolute;
+}
+
+.right {
+  transform: rotateY(180deg) translate(-$px15, -$px10);
+}
