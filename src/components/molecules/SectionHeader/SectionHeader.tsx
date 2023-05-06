@@ -8,7 +8,7 @@ export interface SectionHeaderProps extends Base {
   align?: 'left' | 'right';
 }
 
-const SectionHeader: FC<SectionHeaderProps> = ({ align, title, style, className }) => {
+export const SectionHeader: FC<SectionHeaderProps> = ({ align, title, style, className }) => {
   return (
     <div
       className={[styles.headerContainer, styles[align ?? 'left'], className].join(' ')}
@@ -20,7 +20,6 @@ const SectionHeader: FC<SectionHeaderProps> = ({ align, title, style, className 
     </div>
   );
 };
-export default SectionHeader;
 
 SectionHeader.defaultProps = {
   title: undefined,

@@ -11,7 +11,7 @@ export interface ImageProps extends Base {
   withShadow?: boolean;
 }
 
-const Image: FC<ImageProps> = ({ src, width, height, bordered, blured, withShadow }) => {
+export const Image: FC<ImageProps> = ({ src, width, height, bordered, blured, withShadow }) => {
   return (
     <div
       className={[styles.container, bordered && styles.bordered, withShadow && styles.shadow].join(
@@ -30,8 +30,6 @@ const Image: FC<ImageProps> = ({ src, width, height, bordered, blured, withShado
     </div>
   );
 };
-
-export default Image;
 
 Image.defaultProps = {
   src: '',

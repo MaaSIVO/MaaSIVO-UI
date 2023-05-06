@@ -11,7 +11,7 @@ export interface IndicatorFeatureProps extends Base {
   contentClassName?: string;
 }
 
-const IndicatorFeature: FC<IndicatorFeatureProps> = ({
+export const IndicatorFeature: FC<IndicatorFeatureProps> = ({
   style,
   className,
   children,
@@ -34,7 +34,6 @@ const IndicatorFeature: FC<IndicatorFeatureProps> = ({
     </div>
   );
 };
-export default IndicatorFeature;
 
 IndicatorFeature.defaultProps = {
   children: null,

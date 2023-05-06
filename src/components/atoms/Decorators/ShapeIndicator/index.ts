@@ -1,3 +1,1 @@
-import ShapeIndicator from './ShapeIndicator';
-
-export default ShapeIndicator;
+export * from './ShapeIndicator'

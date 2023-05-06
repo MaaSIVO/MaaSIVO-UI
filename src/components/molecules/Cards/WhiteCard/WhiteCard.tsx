@@ -11,7 +11,7 @@ export interface WhiteCardProps extends Base {
   align?: 'left' | 'right' | 'center' | 'justify';
 }
 
-const WhiteCard: FC<WhiteCardProps> = ({
+export const WhiteCard: FC<WhiteCardProps> = ({
   align,
   title,
   style,
@@ -38,7 +38,6 @@ const WhiteCard: FC<WhiteCardProps> = ({
     </div>
   );
 };
-export default WhiteCard;
 
 WhiteCard.defaultProps = {
   children: undefined,
