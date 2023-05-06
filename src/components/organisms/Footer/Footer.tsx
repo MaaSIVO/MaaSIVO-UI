@@ -6,7 +6,7 @@ import { maasivoSocialMedia } from '../../../data/socials';
 
 export interface FooterProps extends Base {}
 
-const Footer: FC<FooterProps> = ({ style, className }) => {
+export const Footer: FC<FooterProps> = ({ style, className }) => {
   return (
     <div className={[styles.footerContainer, className].join(' ')} style={style}>
       <div className={styles.blurContainer}>
@@ -24,6 +24,5 @@ const Footer: FC<FooterProps> = ({ style, className }) => {
     </div>
   );
 };
-export default Footer;
 
 Footer.defaultProps = {};

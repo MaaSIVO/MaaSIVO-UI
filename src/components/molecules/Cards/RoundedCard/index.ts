@@ -1,3 +1,1 @@
-import RoundedCard from './RoundedCard';
-
-export default RoundedCard;
+export * from './RoundedCard'

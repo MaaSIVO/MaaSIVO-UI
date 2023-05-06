@@ -1,3 +1,1 @@
-import Typo from './Typo';
-
-export default Typo;
+export * from './Typo'

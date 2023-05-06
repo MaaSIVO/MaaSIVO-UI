@@ -12,7 +12,7 @@ export interface ThemedCardProps extends Base {
   align?: 'left' | 'right' | 'center' | 'justify';
 }
 
-const ThemedCard: FC<ThemedCardProps> = ({
+export const ThemedCard: FC<ThemedCardProps> = ({
   align,
   title,
   style,
@@ -37,7 +37,6 @@ const ThemedCard: FC<ThemedCardProps> = ({
     </div>
   );
 };
-export default ThemedCard;
 
 ThemedCard.defaultProps = {
   bordered: true,

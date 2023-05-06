@@ -6,7 +6,7 @@ export interface ShapeIndicatorProps extends Base {
   position?: 'left' | 'right';
 }
 
-const ShapeIndicator: FC<ShapeIndicatorProps> = ({ style, className, position }) => {
+export const ShapeIndicator: FC<ShapeIndicatorProps> = ({ style, className, position }) => {
   return (
     <div
       className={[styles.indicatorContainer, position === 'right' && styles.right, className].join(
@@ -20,7 +20,6 @@ const ShapeIndicator: FC<ShapeIndicatorProps> = ({ style, className, position })
     </div>
   );
 };
-export default ShapeIndicator;
 
 ShapeIndicator.defaultProps = {
   position: 'left'

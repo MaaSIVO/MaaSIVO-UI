@@ -1,3 +1,1 @@
-import IndicatorFeature from './IndicatorFeature';
-
-export default IndicatorFeature;
+export * from './IndicatorFeature'

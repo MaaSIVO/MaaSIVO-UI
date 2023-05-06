@@ -3,8 +3,8 @@ import { IconThemeTypes } from '../../../types/theme';
 import * as Icons from '../../../assets/icons/index';
 import { IconOptions } from '../../../types/icons';
 import { Base } from '../../../types/base';
-import Typo from '../Typo';
 import styles from './icon.module.scss';
+import { Typo } from '../Typo';
 
 export interface IconProps extends Base {
   color?: string;
@@ -14,7 +14,7 @@ export interface IconProps extends Base {
   theme?: IconThemeTypes;
 }
 
-const Icon: FC<IconProps> = ({ name, size, theme, className, style, onClick }) => {
+export const Icon: FC<IconProps> = ({ name, size, theme, className, style, onClick }) => {
   const IconComponent = Icons[name];
 
   const colorTheme = {
@@ -32,8 +32,6 @@ const Icon: FC<IconProps> = ({ name, size, theme, className, style, onClick }) =
     </div>
   );
 };
-
-export default Icon;
 
 Icon.defaultProps = {
   size: '100%',

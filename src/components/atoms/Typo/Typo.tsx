@@ -11,7 +11,7 @@ export interface TypoProps extends Base {
   theme?: TypoThemeTypes;
 }
 
-const Typo: FC<TypoProps> = ({ variant, children, theme, className, style }) => {
+export const Typo: FC<TypoProps> = ({ variant, children, theme, className, style }) => {
   return (
     <p
       className={[styles[variant ?? 'content'], styles[theme ?? 'light'], className].join(' ')}
@@ -21,8 +21,6 @@ const Typo: FC<TypoProps> = ({ variant, children, theme, className, style }) => 
     </p>
   );
 };
-
-export default Typo;
 
 Typo.defaultProps = {
   variant: 'content',

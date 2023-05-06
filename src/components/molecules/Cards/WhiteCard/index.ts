@@ -1,3 +1,1 @@
-import WhiteCard from './WhiteCard';
-
-export default WhiteCard;
+export * from './WhiteCard'

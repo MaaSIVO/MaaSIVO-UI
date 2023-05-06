@@ -1,8 +1,7 @@
 import React, { FC, useEffect, useRef, useState } from 'react';
-import Typo from '../../../atoms/Typo';
 import { Base } from '../../../../types/base';
-import Icon, { IconProps } from '../../../atoms/Icon/Icon';
 import styles from './RoundedCard.module.scss';
+import { Icon, IconProps, Typo } from '../../../atoms';
 
 export interface RoundedCardProps extends Base {
   theme?: '';
@@ -10,7 +9,7 @@ export interface RoundedCardProps extends Base {
   icon?: IconProps;
 }
 
-const RoundedCard: FC<RoundedCardProps> = ({ icon, title, style, className }) => {
+export const RoundedCard: FC<RoundedCardProps> = ({ icon, title, style, className }) => {
   const divRef = useRef<HTMLDivElement>(null);
   const [cardWidth, setCardWidth] = useState(0);
 
@@ -35,7 +34,6 @@ const RoundedCard: FC<RoundedCardProps> = ({ icon, title, style, className }) =>
     </div>
   );
 };
-export default RoundedCard;
 
 RoundedCard.defaultProps = {
   title: undefined,
