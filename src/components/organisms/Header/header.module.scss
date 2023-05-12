@@ -1,10 +1,10 @@
-@import "../../../styles/variables.scss";
+@import "../../../styles/index.scss";
 
 .header {
     display: flex;
     padding: 0 $px40;
-    align-items: stretch;
-    background: linear-gradient(-45deg, #ee76527c, #e73c7e83, #23a6d5, #23d5ab6e);
+    align-items: center;
+    background: $header;
     background-size: 200% 200%;
     animation: gradient 15s ease infinite;
     border-radius: 0 0 10px 10px;
@@ -12,7 +12,7 @@
     box-shadow: 0px 10px 50px rgba(114, 195, 206, 0.5);
     &__logo {
         padding-right: $px20;
-        margin: $px20 0;
+        margin: $px20 $px20 $px20 0;
         border-right: 2px solid white;
     }
     &__routes {

@@ -11,3 +11,10 @@ export const maasivoSocialMedia = [
   { link: '', icon: 'Insta' },
   { link: '', icon: 'Mail' }
 ] as SocialMediaProps[];
+
+
+export const routes = [
+  { label: 'MaaSIVO', path: '' },
+  { label: 'Travit', path: '' },
+  { label: 'MaaS', path: '' }
+]

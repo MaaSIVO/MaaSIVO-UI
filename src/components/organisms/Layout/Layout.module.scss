@@ -1,0 +1,9 @@
+@import "../../../styles/index.scss";
+
+.layout {
+    background: black;
+    &__children {
+        padding: $px100;
+        background: $layout;
+    }
+}

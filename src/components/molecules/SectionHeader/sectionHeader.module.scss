@@ -1,4 +1,4 @@
-@import '../../../styles/global.scss';
+@import "../../../styles/index.scss";
 
 .headerContainer {
   top: 0;
@@ -7,7 +7,7 @@
   padding: $px20 $px50;
   flex-direction: column;
   gap: $px10;
-  background: linear-gradient(180deg, rgba(0, 142, 162, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+  background: $section-header;
 }
 
 .left {
