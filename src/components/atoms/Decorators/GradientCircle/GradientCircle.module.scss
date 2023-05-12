@@ -1,0 +1,7 @@
+@import "../../../../styles/index.scss";
+
+.gradientCircle {
+    filter: blur(50px);
+    border-radius: 100%;
+    background: $circle-decorator;
+}

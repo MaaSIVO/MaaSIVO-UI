@@ -1,6 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Header } from '../../src/components';
+import { routes } from '../../src/data/socials';
 
 export default {
   title: 'Layout/Header',
@@ -15,14 +16,7 @@ const Template: ComponentStory<typeof Header> = (args) => (
       background: '#000',
       position: 'relative'
     }}>
-    <Header
-      {...args}
-      routes={[
-        { label: 'MaaSIVO', path: '' },
-        { label: 'Travit', path: '' },
-        { label: 'MaaS', path: '' }
-      ]}
-    />
+    <Header {...args} routes={routes} />
   </div>
 );
 
