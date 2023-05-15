@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Layout } from '../../src/components';
-import { routes } from '../../src/data/socials';
+import { routes } from '../../src/data';
 
 export default {
   title: 'Layout/Layout',

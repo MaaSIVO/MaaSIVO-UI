@@ -1,14 +1,14 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Header } from '../../src/components';
-import { routes } from '../../src/data';
+import { CircleCardCarousel } from '../../src/components';
+import { values } from '../../src/data';
 
 export default {
-  title: 'Layout/Header',
-  component: Header
-} as ComponentMeta<typeof Header>;
+  title: 'Carousels/CircleCard',
+  component: CircleCardCarousel
+} as ComponentMeta<typeof CircleCardCarousel>;
 
-const Template: ComponentStory<typeof Header> = (args) => (
+const Template: ComponentStory<typeof CircleCardCarousel> = (args) => (
   <div
     style={{
       padding: 50,
@@ -16,7 +16,7 @@ const Template: ComponentStory<typeof Header> = (args) => (
       background: '#000',
       position: 'relative'
     }}>
-    <Header {...args} routes={routes} />
+    <CircleCardCarousel {...args} items={values} />
   </div>
 );
 

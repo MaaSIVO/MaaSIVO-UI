@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import { Divider, Icon, Typo } from '../../atoms';
 import styles from './footer.module.scss';
 import { Base } from '../../../types/base';
-import { maasivoSocialMedia } from '../../../data/socials';
+import { maasivoSocialMedia } from '../../../data';
 
-export interface FooterProps extends Base {}
+export type FooterProps = Base
 
 export const Footer: FC<FooterProps> = ({ style, className }) => {
   return (

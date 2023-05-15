@@ -8,14 +8,14 @@ import { Typo } from '../Typo';
 
 export interface IconProps extends Base {
   color?: string;
-  name: IconOptions;
+  name?: IconOptions;
   onClick?: () => void;
   size?: number | string;
   theme?: IconThemeTypes;
 }
 
 export const Icon: FC<IconProps> = ({ name, size, theme, className, style, onClick }) => {
-  const IconComponent = Icons[name];
+  const IconComponent = name && Icons[name];
 
   const colorTheme = {
     light: 'white',

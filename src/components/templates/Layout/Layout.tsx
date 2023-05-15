@@ -2,11 +2,9 @@ import React, { FC } from 'react';
 import { Divider, Icon, Typo } from '../../atoms';
 import styles from './Layout.module.scss';
 import { Base } from '../../../types/base';
-import { Header, HeaderProps } from '../Header';
-import { Footer } from '../Footer';
+import { Footer, Header, HeaderProps } from '../../organisms';
 
 export type layout = Base & HeaderProps;
-
 export interface LayoutProps extends layout {
   footerClassName?: string;
   headerClassName?: string;

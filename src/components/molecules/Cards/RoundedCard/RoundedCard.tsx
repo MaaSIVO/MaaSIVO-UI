@@ -1,35 +1,28 @@
-import React, { FC, useEffect, useRef, useState } from 'react';
+import React, { FC } from 'react';
 import { Base } from '../../../../types/base';
 import styles from './RoundedCard.module.scss';
 import { Icon, IconProps, Typo } from '../../../atoms';
 
 export interface RoundedCardProps extends Base {
-  theme?: '';
   title?: string;
   icon?: IconProps;
+  size?: number;
 }
 
-export const RoundedCard: FC<RoundedCardProps> = ({ icon, title, style, className }) => {
-  const divRef = useRef<HTMLDivElement>(null);
-  const [cardWidth, setCardWidth] = useState(0);
-
-  useEffect(() => {
-    if (divRef.current) {
-      const divWidth = divRef.current.offsetWidth;
-      setCardWidth(divWidth);
-    }
-  }, []);
+export const RoundedCard: FC<RoundedCardProps> = ({ icon, title, style, className, size }) => {
   return (
-    <div
-      ref={divRef}
-      className={[styles.baseCard, className].join(' ')}
-      style={{ height: cardWidth, maxHeight: cardWidth, ...style }}
-    >
-      {icon && <Icon {...icon} />}
+    <div className={styles.rounded}>
+      <div
+        className={[styles.baseCard, className].join(' ')}
+        style={{ height: size, width: size, minWidth: size, ...style }}>
+        {icon && <Icon {...icon} />}
+      </div>
       {title && (
-        <Typo theme="themedColor" className={styles.title}>
-          {title}
-        </Typo>
+        <div className={styles.titleContainer}>
+          <Typo theme="themedColor" className={styles.title}>
+            {title}
+          </Typo>
+        </div>
       )}
     </div>
   );
@@ -37,5 +30,6 @@ export const RoundedCard: FC<RoundedCardProps> = ({ icon, title, style, classNam
 
 RoundedCard.defaultProps = {
   title: undefined,
-  icon: undefined
+  icon: undefined,
+  size: 100
 };
