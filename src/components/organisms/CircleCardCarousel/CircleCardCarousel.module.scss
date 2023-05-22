@@ -1,0 +1,9 @@
+@import "../../../styles/index.scss";
+
+.carousel {
+    gap: 20px;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    align-items: center;
+}

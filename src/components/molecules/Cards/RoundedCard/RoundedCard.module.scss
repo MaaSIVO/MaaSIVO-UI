@@ -1,20 +1,30 @@
 @import "../../../../styles/index.scss";
 
+.rounded {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $px10;
+}
 .baseCard {
   display: flex;
   padding: $px30;
   overflow: hidden;
   @include baseCard;
-  width: max-content;
   text-align: center;
   position: relative;
   border-radius: 100%;
   background: white;
   align-items: center;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
+.titleContainer {
+  border-radius: 50px;
+  padding: $px10;
+  background: rgba($color: #fff, $alpha: 0.2);
+}
 .title {
   white-space: normal;
 }
