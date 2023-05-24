@@ -1,9 +1,57 @@
 @import "../../../styles/index.scss";
 
 .carousel {
-    gap: 20px;
     display: flex;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    align-items: center;
+    padding: 0 $px30;
+    position: relative;
+    justify-content: center;
+    &__scroll {
+        gap: $px20;
+        display: flex;
+        width: max-content;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        align-items: center;
+        padding: $px20 $px30;
+    }
+    &__scroll::-webkit-scrollbar {
+        height: 2px;
+    }
+    /* Track */
+    &__scroll::-webkit-scrollbar-track {
+        border-radius: 10px;
+        box-shadow: inset 0 0 5px grey;
+    }
+    /* Handle */
+    &__scroll::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: rgb(23, 54, 71);
+    }
+    /* Handle on hover */
+    &__scroll::-webkit-scrollbar-thumb:hover {
+        background: rgb(23, 54, 71, 0.3);
+    }
+    &__arrows {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        position: absolute;
+        justify-content: space-between;
+    }
+    &__arrow {
+        display: flex;
+        padding: $px10;
+        cursor: pointer;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.2);
+    }
+    &__prev {
+        transform: rotate(180deg);
+    }
 }
