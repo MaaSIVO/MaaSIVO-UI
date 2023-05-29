@@ -22,7 +22,7 @@ export const useHorizontalScroll = () => {
       const interval = setInterval(() => {
         if (direction) {
           const scrollOff = scrollRef.current?.scrollLeft;
-          scrollRef.current?.scrollTo(scrollOffset + (direction === 'left' ? -1 : 1), 0);
+          scrollRef.current?.scrollTo(scrollOffset + (direction === 'left' ? -4 : 4), 0);
           setScrollOffset(scrollOff ?? 0);
         }
       }, 5);
