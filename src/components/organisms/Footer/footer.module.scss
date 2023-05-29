@@ -14,8 +14,8 @@
   padding: $px50;
   text-align: center;
   box-sizing: border-box;
-  @include centerColumn($justify: flex-end);
   backdrop-filter: blur(10px);
+  @include centerColumn($justify: flex-end);
 }
 
 .contactDiv {
@@ -26,8 +26,8 @@
   margin-bottom: $px50;
   box-sizing: border-box;
   box-shadow: $white-shadow;
-  @include centerRow($justify: space-between);
   background: rgba(255, 255, 255, 0.3);
+  @include centerRow($justify: space-between);
 }
 
 .iconContainer {
@@ -36,14 +36,14 @@
 }
 
 .socialIcon {
-  border-radius: 100%;
   padding: $px5;
   @include centerRow;
+  border-radius: 100%;
 }
 
 .socialIcon:hover {
-  animation-name: rotation;
   animation-duration: 2s;
+  animation-name: rotation;
 }
 
 @keyframes rotation {

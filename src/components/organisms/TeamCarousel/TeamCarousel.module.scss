@@ -1,0 +1,51 @@
+@import "../../../styles/index.scss";
+
+.carousel {
+    height: 390px;
+    position: relative;
+    &__item {
+        top: 0;
+        width: 250px;
+        height: 370px;
+        padding: 10px;
+        transition: 0.5s;
+        position: absolute;
+        text-align: justify;
+        border-radius: 10px;
+        left: calc(50% - 135px);
+        background: $theme-color-diagonal;
+    }
+    &__teamImage {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+    &__arrows {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        position: absolute;
+        justify-content: space-between;
+    }
+    &__prev {
+        transform: rotate(180deg);
+    }
+    &__info {
+        top: 420px;
+        gap: $px10;
+        display: flex;
+        text-align: center;
+        position: absolute;
+        align-items: center;
+        flex-direction: column;
+    }
+    &__teamName {
+        padding: $px5 $px25;
+        border-radius: 30px;
+        background-color: rgba($color: #fff, $alpha: 0.4);
+    }
+}
