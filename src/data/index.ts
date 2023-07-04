@@ -1,5 +1,5 @@
 import { Anaid, Hector, Paulo, Rafa } from '../assets/img';
-import { RoundedCardProps, TeamMemberProps } from '../components';
+import { TeamMemberProps } from '../components';
 import { IconOptions } from '../types/icons';
 
 export interface SocialMediaProps {
@@ -20,64 +20,33 @@ export const routes = [
   { label: 'MaaS', path: '' }
 ];
 
-export const values = [
-  ,  {
-    title: 'Excellence',
-    icon: {
-      name: 'Work'
-    }
-  },
-  {
-    title: 'Sustentabilidad',
-    icon: {
-      name: 'Sustentabillity'
-    }
-  },
-  {
-    title: 'Innovación',
-    icon: {
-      name: 'Idea2'
-    }
-  },
-  {
-    title: 'Pasión',
-    icon: {
-      name: 'Heart'
-    }
-  },
-  {
-    title: 'Colaboración',
-    icon: {
-      name: 'Colaboration'
-    }
-  },
-
-] as RoundedCardProps[];
-
-
 export const teamMemberData = [
   {
     img: Anaid,
     name: 'Member Name',
     jobPosition: 'Job Position',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
   },
   {
     img: Hector,
     name: 'Member Name',
     jobPosition: 'Job Position',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-  },  
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+  },
   {
     img: Paulo,
     name: 'Member Name',
     jobPosition: 'Job Position',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-  },  
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+  },
   {
     img: Rafa,
     name: 'Member Name',
     jobPosition: 'Job Position',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-  },
-] as TeamMemberProps[]
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+  }
+] as TeamMemberProps[];
