@@ -1,7 +1,14 @@
 import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
+import typescript from '@rollup/plugin-typescript';
+import path from 'path';
+import { typescriptPaths } from 'rollup-plugin-typescript-paths';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
 
 export default defineConfig({
   plugins: [
@@ -11,21 +18,26 @@ export default defineConfig({
     })
   ],
   build: {
+    manifest: true,
+    minify: true,
+    reportCompressedSize: true,
     lib: {
-      entry: resolve('src', 'index.ts'),
-      name: 'MaaSIVO-UI',
-      formats: ['es', 'umd'],
-      fileName: (format) => `my-lib.${format}.js`
+      entry: path.resolve(__dirname, 'src/index.ts'),
+      fileName: 'main',
+      formats: ['es', 'cjs']
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'styled-components'],
-      output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-          'styled-components': 'styled'
-        }
-      }
+      external: [],
+      plugins: [
+        typescriptPaths({
+          preserveExtensions: true
+        }),
+        typescript({
+          sourceMap: false,
+          declaration: true,
+          outDir: 'dist'
+        })
+      ]
     }
   }
 });
