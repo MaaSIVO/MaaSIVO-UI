@@ -2,7 +2,18 @@
   "name": "MaaSIVO-UI",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/MaaSIVO-UI.umd.js",
+  "module": "./dist/MaaSIVO-UI.es.js",
+  "types": "./dist/MaaSIVO-UI.es.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/MaaSIVO-UI.es.js",
+      "require": "./dist/MaaSIVO-UI.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "homepage": "http://AnaidOrtega.github.io/MaaSIVO-UI",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,8 +22,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "tsc && vite build"
   },
   "keywords": [],
   "author": "",
@@ -42,15 +54,19 @@
     "react-dom": "^18.2.0",
     "sass-loader": "^10.4.1",
     "style-loader": "^2.0.0",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.2",
+    "vite-plugin-dts": "^2.3.0"
   },
   "dependencies": {
+    "@rollup/plugin-typescript": "^11.1.1",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/addons": "^6.5.16",
     "@storybook/theming": "^6.5.16",
+    "@vitejs/plugin-react": "^4.0.0",
     "autoprefixer": "^10.4.14",
     "css-loader": "^5.2.6",
     "postcss-flexbugs-fixes": "^5.0.2",
+    "rollup-plugin-typescript-paths": "^1.4.0",
     "sass": "^1.60.0"
   }
 }

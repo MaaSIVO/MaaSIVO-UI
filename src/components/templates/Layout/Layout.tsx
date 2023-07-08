@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import { Divider, Icon, Typo } from '../../atoms';
 import styles from './Layout.module.scss';
 import { Base } from '../../../types/base';
 import { Footer, Header, HeaderProps } from '../../organisms';
@@ -10,7 +9,7 @@ export interface LayoutProps extends layout {
   headerClassName?: string;
   contentClassName?: string;
   children?: React.ReactNode;
-  contentStyle: React.CSSProperties;
+  contentStyle?: React.CSSProperties;
   headerStyle?: React.CSSProperties;
   footerStyle?: React.CSSProperties;
 }
