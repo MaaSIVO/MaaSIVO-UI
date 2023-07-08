@@ -2,6 +2,9 @@
   "name": "MaaSIVO-UI",
   "version": "1.0.0",
   "description": "",
+  "main": "./dist/MaaSIVO-UI.umd.js",
+  "module": "./dist/MaaSIVO-UI.es.js",
+  "types": "./dist/MaaSIVO-UI.es.d.ts",
   "exports": {
     ".": {
       "import": "./dist/MaaSIVO-UI.es.js",
@@ -11,8 +14,6 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/MaaSIVO-UI.umd.js",
-  "module": "./dist/MaaSIVO-UI.es.js",
   "homepage": "http://AnaidOrtega.github.io/MaaSIVO-UI",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
