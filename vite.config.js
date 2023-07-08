@@ -1,10 +1,10 @@
-import react from '@vitejs/plugin-react';
-import { defineConfig } from 'vite';
-import dts from 'vite-plugin-dts';
-import typescript from '@rollup/plugin-typescript';
+// vite.config.js
 import path from 'path';
-import { typescriptPaths } from 'rollup-plugin-typescript-paths';
+import { defineConfig } from 'vite';
 import { fileURLToPath } from 'url';
+import react from '@vitejs/plugin-react';
+import dts from 'vite-plugin-dts';
+import { name } from './package.json';
 
 const __filename = fileURLToPath(import.meta.url);
 
@@ -18,26 +18,24 @@ export default defineConfig({
     })
   ],
   build: {
-    manifest: true,
-    minify: true,
-    reportCompressedSize: true,
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      fileName: 'main',
-      formats: ['es', 'cjs']
+      name,
+      formats: ['es', 'umd'],
+      fileName: (format) => `${name}.${format}.js`
     },
     rollupOptions: {
-      external: [],
-      plugins: [
-        typescriptPaths({
-          preserveExtensions: true
-        }),
-        typescript({
-          sourceMap: false,
-          declaration: true,
-          outDir: 'dist'
-        })
-      ]
+      external: ['react', 'react-dom'],
+      output: {
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM'
+        }
+      }
     }
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom'
   }
 });
