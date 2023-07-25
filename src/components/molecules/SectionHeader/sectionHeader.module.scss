@@ -1,13 +1,18 @@
 @import "../../../styles/index.scss";
 
 .headerContainer {
-  top: 0;
+  gap: $px10;
   display: flex;
   position: absolute;
+  transition: all 2s;
   padding: $px20 $px50;
   flex-direction: column;
-  gap: $px10;
   background: $section-header;
+  @media only screen and (max-width: $tableXs) {
+    padding: $px20;
+    position: relative;
+    border-radius: $px10 !important;
+  }
 }
 
 .left {

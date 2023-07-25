@@ -4,22 +4,12 @@ import styles from './image.module.scss';
 
 export interface ImageProps extends Base {
   src: string;
-  width?: string | number;
-  height?: string | number;
   bordered?: boolean;
   blured?: boolean;
   withShadow?: boolean;
 }
 
-export const Image: FC<ImageProps> = ({
-  src,
-  width,
-  height,
-  bordered,
-  blured,
-  withShadow,
-  className
-}) => {
+export const Image: FC<ImageProps> = ({ src, bordered, blured, withShadow, className }) => {
   return (
     <div
       className={[
@@ -28,7 +18,7 @@ export const Image: FC<ImageProps> = ({
         withShadow && styles.shadow,
         className
       ].join(' ')}>
-      <img src={src} style={{ width, height }} className={[styles.imgContainer].join(' ')} />
+      <img src={src} className={styles.imgContainer} />
       {blured && (
         <>
           <div className={[styles.topBlur, styles.blurBase].join(' ')} />
@@ -43,9 +33,7 @@ export const Image: FC<ImageProps> = ({
 
 Image.defaultProps = {
   src: '',
-  width: '100%',
-  height: '100%',
-  bordered: false,
   blured: false,
+  bordered: false,
   withShadow: true
 };

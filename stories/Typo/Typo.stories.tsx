@@ -17,11 +17,15 @@ const Template: ComponentStory<typeof Typo> = (args) => (
       justifyContent: 'center',
       alignItems: 'center',
       gap: 10
-    }}
-  >
+    }}>
     <Typo {...args} />
     <Typo {...args} theme="dark" />
     <Typo {...args} theme="themedColor" />
+
+    <Typo {...args} variant="title" />
+    <Typo {...args} variant="subtitle" />
+    <Typo {...args} variant="content" />
+    <Typo {...args} variant="helperText" />
   </div>
 );
 

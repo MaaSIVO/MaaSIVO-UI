@@ -1,9 +1,12 @@
 @import "../../../styles/index.scss";
 
 .layout {
+    min-height: 100vh;
     background: black;
+    display: flex;
+    flex-direction: column;
     &__children {
-        padding: $px100;
+        flex: 1;
         background: $layout;
     }
 }

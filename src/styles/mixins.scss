@@ -1,15 +1,14 @@
 @mixin themeColorText {
+  background-clip: text;
   background: $theme-color;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 @mixin baseCard {
-  width: 100%;
   height: auto;
-  box-sizing: border-box;
   border-radius: 10px;
+  box-sizing: border-box;
   box-shadow: $white-shadow;
 }
 
