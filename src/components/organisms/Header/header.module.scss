@@ -10,10 +10,22 @@
     border-radius: 0 0 10px 10px;
     border-bottom: 3px solid rgba(120, 255, 236, 0.5);
     box-shadow: 0px 10px 50px rgba(114, 195, 206, 0.5);
+    @media only screen and (max-width: $tableXs) {
+        padding: $px20;
+    }
     &__logo {
         padding-right: $px20;
         margin: $px20 $px20 $px20 0;
         border-right: 2px solid white;
+        @media only screen and (max-width: $tableXs) {
+            margin: 0;
+        }
+    }
+    &__banner {
+        display: inline;
+        @media only screen and (max-width: $tableXs) {
+            display: none;
+        }
     }
     &__routes {
         flex: 1;
@@ -40,7 +52,9 @@
             transform: scale(0);
             background-color: white;
             transform-origin: center;
-            transition: opacity 300ms, transform 300ms;
+            transition:
+                opacity 300ms,
+                transform 300ms;
         }
         &:hover::after,
         &:focus::after {

@@ -24,7 +24,8 @@
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build": "tsc && vite build"
+    "build": "tsc && vite build",
+    "deploy-local": "tsc && vite build && yalc publish && yalc push"
   },
   "keywords": [],
   "author": "",
