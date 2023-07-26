@@ -5,6 +5,7 @@ import styles from './themedCard.module.scss';
 
 export interface ThemedCardProps extends Base {
   title?: string;
+  shadow?: boolean;
   bordered?: boolean;
   children?: ReactNode;
   contentClassName?: string;
@@ -16,6 +17,7 @@ export const ThemedCard: FC<ThemedCardProps> = ({
   align,
   title,
   style,
+  shadow,
   children,
   bordered,
   className,
@@ -23,7 +25,7 @@ export const ThemedCard: FC<ThemedCardProps> = ({
   contentClassName
 }) => {
   return (
-    <div className={[styles.baseCard, className].join(' ')} style={style}>
+    <div className={[styles.baseCard, shadow && styles.shadow, className].join(' ')} style={style}>
       <div className={[styles.innerCard, bordered && styles.bordered].join(' ')}>
         {title && (
           <Typo variant="subtitle" className={styles.title} style={{ textAlign: align }}>

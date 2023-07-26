@@ -1,19 +1,40 @@
 import React, { FC } from 'react';
 import { IconOptions } from '../../../../types';
-import { ThemedCard } from '../ThemedCard';
+import { ThemedCard, ThemedCardProps } from '../ThemedCard';
 import { RoundedCard } from '../RoundedCard';
 import styles from './FeatureCard.module.scss';
-export interface FeatureCardProps {
+import { useWindowSize } from '../../../../hooks/useWindowSize';
+export interface FeatureCardProps extends ThemedCardProps {
   children?: React.ReactNode;
   icon: IconOptions;
 }
 
-export const FeatureCard: FC<FeatureCardProps> = ({ children, icon }) => {
+export const FeatureCard: FC<FeatureCardProps> = ({
+  children,
+  icon,
+  style,
+  className,
+  ...props
+}) => {
+  const { width } = useWindowSize();
+  const isMobile = width <= 768;
+
   return (
-    <ThemedCard className={styles.feature}>
-      <RoundedCard icon={{ name: icon }} className={styles.feature__icon} />
-      {children}
-    </ThemedCard>
+    <div className={styles.feature__container}>
+      <ThemedCard
+        {...props}
+        align="center"
+        style={style}
+        className={[styles.feature, className].join(' ')}
+        contentClassName={styles.feature__content}>
+        <RoundedCard
+          icon={{ name: icon }}
+          size={isMobile ? 100 : 120}
+          className={styles.feature__icon}
+        />
+        {children}
+      </ThemedCard>
+    </div>
   );
 };
 

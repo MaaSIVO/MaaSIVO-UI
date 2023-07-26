@@ -16,6 +16,9 @@
   box-sizing: border-box;
   backdrop-filter: blur(10px);
   @include centerColumn($justify: flex-end);
+  @media only screen and (max-width: $tableXs) {
+    padding: 5%;
+  }
 }
 
 .contactDiv {
@@ -33,6 +36,9 @@
 .iconContainer {
   gap: $px20;
   @include centerRow;
+  @media only screen and (max-width: $tableXs) {
+    gap: $px10;
+  }
 }
 
 .socialIcon {
