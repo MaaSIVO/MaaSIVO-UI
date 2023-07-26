@@ -3,10 +3,13 @@ import { Divider, Icon, Typo } from '../../atoms';
 import styles from './footer.module.scss';
 import { Base } from '../../../types/base';
 import { maasivoSocialMedia } from '../../../data';
+import { useWindowSize } from '../../../hooks/useWindowSize';
 
-export type FooterProps = Base
+export type FooterProps = Base;
 
 export const Footer: FC<FooterProps> = ({ style, className }) => {
+  const { width } = useWindowSize();
+  const isMobile = width <= 768;
   return (
     <div className={[styles.footerContainer, className].join(' ')} style={style}>
       <div className={styles.blurContainer}>
@@ -14,7 +17,12 @@ export const Footer: FC<FooterProps> = ({ style, className }) => {
           <Typo style={{ fontWeight: 400 }}>Contáctanos</Typo>
           <div className={styles.iconContainer}>
             {maasivoSocialMedia.map((s) => (
-              <Icon key={s.icon} name={s.icon} size={30} className={styles.socialIcon} />
+              <Icon
+                key={s.icon}
+                name={s.icon}
+                size={isMobile ? 20 : 30}
+                className={styles.socialIcon}
+              />
             ))}
           </div>
         </div>

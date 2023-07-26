@@ -1,6 +1,25 @@
+@import "../../../../styles/index.scss";
+
+$size: 120px;
+$sizeXs: 100px;
+
 .feature {
     position: relative;
     &__icon {
+        top: 0;
         position: absolute;
+        transform: translateY(-50%);
+    }
+    &__container {
+        padding-top: calc($size / 2);
+        @media only screen and (max-width: $tableXs) {
+            padding-top: calc($sizeXs / 2);
+        }
+    }
+    &__content {
+        padding-top: calc(($size - 30px) / 2);
+        @media only screen and (max-width: $tableXs) {
+            padding-top: calc(($sizeXs - 30px) / 2);
+        }
     }
 }
