@@ -23,6 +23,7 @@ export const Layout: FC<LayoutProps> = ({
   headerStyle,
   onLogoClick,
   contentStyle,
+  onRouteClick,
   headerClassName,
   footerClassName,
   contentClassName
@@ -31,9 +32,10 @@ export const Layout: FC<LayoutProps> = ({
     <div className={[styles.layout, className].join(' ')} style={style}>
       <Header
         routes={routes}
-        className={headerClassName}
         style={headerStyle}
         onLogoClick={onLogoClick}
+        onRouteClick={onRouteClick}
+        className={headerClassName}
       />
       <div className={[styles.layout__children, contentClassName].join(' ')} style={contentStyle}>
         {children}

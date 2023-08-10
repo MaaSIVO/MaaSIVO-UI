@@ -10,16 +10,32 @@ export interface RouteProps {
 export interface HeaderProps extends Base {
   routes: RouteProps[];
   onLogoClick?: () => void;
+  onRouteClick?: (route: string) => void;
 }
 
-export const Header: FC<HeaderProps> = ({ routes, className, style, onLogoClick }) => {
+export const Header: FC<HeaderProps> = ({
+  routes,
+  className,
+  style,
+  onLogoClick,
+  onRouteClick
+}) => {
+  const handleRouteClick = (path: string) => {
+    if (onRouteClick) {
+      onRouteClick(path);
+    }
+  };
+
   return (
     <div className={[styles.header, className].join(' ')} style={style}>
       <Icon name="Maasivo" size={100} className={styles.header__logo} onClick={onLogoClick} />
       <Typo className={styles.header__banner}>Innovación en Movimiento</Typo>
       <div className={styles.header__routes}>
         {routes.map((r) => (
-          <a className={styles.header__route} key={r.label}>
+          <a
+            className={styles.header__route}
+            key={r.label}
+            onClick={() => handleRouteClick(r.path)}>
             <Typo>{r.label}</Typo>
           </a>
         ))}

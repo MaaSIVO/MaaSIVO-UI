@@ -50,6 +50,9 @@
         justify-content: center;
         backdrop-filter: blur(10px);
         background: rgba(255, 255, 255, 0.2);
+        @media only screen and (max-width: $mobile) {
+            padding: $px5;
+        }
     }
     &__prev {
         transform: rotate(180deg);

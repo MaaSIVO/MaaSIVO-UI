@@ -8,7 +8,7 @@ export interface DividerProps extends Base {
 
 export const Divider: FC<DividerProps> = ({ style, className, width }) => {
   return (
-    <div className={[styles.divider, className].join('')} style={{ width: width, ...style }} />
+    <div className={[styles.divider, className].join(' ')} style={{ width: width, ...style }} />
   );
 };
 
