@@ -30,6 +30,9 @@
         height: 100%;
         border-radius: 10px;
         box-sizing: border-box;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
     }
     &__arrows {
         top: 0;

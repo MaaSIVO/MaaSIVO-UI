@@ -22,11 +22,11 @@ export const TeamCarousel: FC<TeamCarouselProps> = ({ className, style, items })
       <div className={[styles.carousel, className].join(' ')} style={style}>
         {items.map((item, index) => (
           <div key={item.name} className={styles.carousel__item} style={itemStyles[index]}>
-            <Image
-              src={item.img}
+            <div
               className={styles.carousel__teamImage}
-              bordered
-              withShadow={false}
+              style={{
+                backgroundImage: `url(${item.img})`
+              }}
             />
           </div>
         ))}

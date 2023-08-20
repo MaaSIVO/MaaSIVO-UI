@@ -2,12 +2,16 @@ import React, { FC } from 'react';
 import styles from './Layout.module.scss';
 import { Base } from '../../../types/base';
 import { Footer, Header, HeaderProps } from '../../organisms';
+import { SocialMediaProps } from '../../../data';
 
 export type layout = Base & HeaderProps;
 export interface LayoutProps extends layout {
+  rights?: string;
+  footerTitle?: string;
   footerClassName?: string;
   headerClassName?: string;
   contentClassName?: string;
+  icons?: SocialMediaProps[];
   children?: React.ReactNode;
   contentStyle?: React.CSSProperties;
   headerStyle?: React.CSSProperties;
@@ -15,10 +19,13 @@ export interface LayoutProps extends layout {
 }
 
 export const Layout: FC<LayoutProps> = ({
+  icons,
   style,
   routes,
+  rights,
   children,
   className,
+  footerTitle,
   footerStyle,
   headerStyle,
   onLogoClick,
@@ -40,7 +47,13 @@ export const Layout: FC<LayoutProps> = ({
       <div className={[styles.layout__children, contentClassName].join(' ')} style={contentStyle}>
         {children}
       </div>
-      <Footer className={footerClassName} style={footerStyle} />
+      <Footer
+        className={footerClassName}
+        style={footerStyle}
+        icons={icons}
+        title={footerTitle}
+        rights={rights}
+      />
     </div>
   );
 };

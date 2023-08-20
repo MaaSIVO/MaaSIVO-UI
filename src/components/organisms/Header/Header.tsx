@@ -8,15 +8,17 @@ export interface RouteProps {
   label: string;
 }
 export interface HeaderProps extends Base {
+  title?: string;
   routes: RouteProps[];
   onLogoClick?: () => void;
   onRouteClick?: (route: string) => void;
 }
 
 export const Header: FC<HeaderProps> = ({
+  style,
+  title,
   routes,
   className,
-  style,
   onLogoClick,
   onRouteClick
 }) => {
@@ -29,7 +31,7 @@ export const Header: FC<HeaderProps> = ({
   return (
     <div className={[styles.header, className].join(' ')} style={style}>
       <Icon name="Maasivo" size={100} className={styles.header__logo} onClick={onLogoClick} />
-      <Typo className={styles.header__banner}>Innovación en Movimiento</Typo>
+      <Typo className={styles.header__banner}>{title}</Typo>
       <div className={styles.header__routes}>
         {routes.map((r) => (
           <a

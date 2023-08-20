@@ -2,21 +2,25 @@ import React, { FC } from 'react';
 import { Divider, Icon, Typo } from '../../atoms';
 import styles from './footer.module.scss';
 import { Base } from '../../../types/base';
-import { maasivoSocialMedia } from '../../../data';
+import { SocialMediaProps } from '../../../data';
 import { useWindowSize } from '../../../hooks/useWindowSize';
 
-export type FooterProps = Base;
+export interface FooterProps extends Base {
+  title?: string;
+  rights?: string;
+  icons?: SocialMediaProps[];
+}
 
-export const Footer: FC<FooterProps> = ({ style, className }) => {
+export const Footer: FC<FooterProps> = ({ style, className, title, rights, icons }) => {
   const { width } = useWindowSize();
   const isMobile = width <= 768;
   return (
     <div className={[styles.footerContainer, className].join(' ')} style={style}>
       <div className={styles.blurContainer}>
         <div className={styles.contactDiv}>
-          <Typo style={{ fontWeight: 400 }}>Contáctanos</Typo>
+          <Typo style={{ fontWeight: 400 }}>{title}</Typo>
           <div className={styles.iconContainer}>
-            {maasivoSocialMedia.map((s) => (
+            {icons?.map((s) => (
               <Icon
                 key={s.icon}
                 name={s.icon}
@@ -27,7 +31,7 @@ export const Footer: FC<FooterProps> = ({ style, className }) => {
           </div>
         </div>
         <Divider />
-        <Typo variant="helperText">© MaaSIVO 2023 | Innovación en Movimiento</Typo>
+        <Typo variant="helperText">{rights}</Typo>
       </div>
     </div>
   );

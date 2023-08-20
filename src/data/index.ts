@@ -1,4 +1,4 @@
-import { Anaid, Hector, Paulo, Rafa } from '../assets/img';
+import { Person1, Person2, Person3, Person4 } from '../assets/img';
 import { RoundedCardProps, TeamMemberProps } from '../components';
 import { IconOptions } from '../types/icons';
 
@@ -22,28 +22,28 @@ export const routes = [
 
 export const teamMemberData = [
   {
-    img: Hector,
-    name: 'hector jesus figueroa casillas',
-    jobPosition: 'Job Position',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
-  },
-  {
-    img: Paulo,
+    img: Person1,
     name: 'Member Name',
     jobPosition: 'Job Position',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
   },
   {
-    img: Rafa,
+    img: Person2,
     name: 'Member Name',
     jobPosition: 'Job Position',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
   },
   {
-    img: Anaid,
+    img: Person3,
+    name: 'Member Name',
+    jobPosition: 'Job Position',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+  },
+  {
+    img: Person4,
     name: 'Member Name',
     jobPosition: 'Job Position',
     description:
