@@ -1,5 +1,5 @@
 {
-  "name": "MaaSIVO-UI",
+  "name": "maasivo-ui",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/MaaSIVO-UI.umd.js",
