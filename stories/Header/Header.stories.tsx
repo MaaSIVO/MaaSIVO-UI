@@ -23,5 +23,5 @@ const Template: ComponentStory<typeof Header> = (args) => (
 export const Default = Template.bind({});
 
 Default.args = {
-  title: 'Un Sistema de Transporte Multimodal'
+  title: 'Innovación en Movimiento'
 };

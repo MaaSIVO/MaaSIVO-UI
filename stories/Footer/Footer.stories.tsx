@@ -1,6 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Footer } from '../../src/components';
+import { maasivoSocialMedia } from '../../src/data';
 
 export default {
   title: 'Layout/Footer',
@@ -14,8 +15,7 @@ const Template: ComponentStory<typeof Footer> = (args) => (
       minHeight: '100vh',
       background: '#000',
       position: 'relative'
-    }}
-  >
+    }}>
     <Footer {...args} />
   </div>
 );
@@ -23,5 +23,7 @@ const Template: ComponentStory<typeof Footer> = (args) => (
 export const Default = Template.bind({});
 
 Default.args = {
-  title: 'Un Sistema de Transporte Multimodal'
+  title: 'Contáctanos',
+  rights: '© MaaSIVO 2023 | Innovación en Movimiento',
+  icons: maasivoSocialMedia
 };

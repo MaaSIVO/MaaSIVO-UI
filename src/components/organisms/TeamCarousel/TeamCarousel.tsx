@@ -18,32 +18,36 @@ export const TeamCarousel: FC<TeamCarouselProps> = ({ className, style, items })
   const { itemStyles, handleNext, handlePrev, activeIndex } = useGetCarouselStyles(items.length);
 
   return (
-    <div className={[styles.carousel, className].join(' ')} style={style}>
-      {items.map((item, index) => (
-        <div className={styles.carousel__item} style={itemStyles[index]}>
-          <Image
-            src={item.img}
-            className={styles.carousel__teamImage}
-            bordered
-            withShadow={false}
+    <div className={styles.container}>
+      <div className={[styles.carousel, className].join(' ')} style={style}>
+        {items.map((item, index) => (
+          <div key={item.name} className={styles.carousel__item} style={itemStyles[index]}>
+            <div
+              className={styles.carousel__teamImage}
+              style={{
+                backgroundImage: `url(${item.img})`
+              }}
+            />
+          </div>
+        ))}
+        <div className={styles.carousel__arrows}>
+          <Icon
+            name="DoubleArrow"
+            size={25}
+            className={[styles.carousel__prev].join(' ')}
+            onClick={handlePrev}
           />
+          <Icon name="DoubleArrow" size={25} onClick={handleNext} />
         </div>
-      ))}
-      <div className={styles.carousel__arrows}>
-        <Icon
-          name="DoubleArrow"
-          size={25}
-          className={[styles.carousel__prev].join(' ')}
-          onClick={handlePrev}
-        />
-        <Icon name="DoubleArrow" size={25} onClick={handleNext} />
       </div>
       <div className={styles.carousel__info}>
-        <div className={styles.carousel__teamName}>
-          <Typo style={{ fontWeight: 'bold' }}>{items[activeIndex].name}</Typo>
+        <div className={styles.carousel__topInfo}>
+          <div className={styles.carousel__teamName}>
+            <Typo style={{ fontWeight: 'bold' }}>{items[activeIndex].name}</Typo>
+          </div>
+          <Typo variant="helperText">{items[activeIndex].jobPosition}</Typo>
         </div>
-        <Typo variant="helperText">{items[activeIndex].jobPosition}</Typo>
-        <Divider style={{ margin: '10px 0' }} />
+        <Divider className={styles.carousel__divider} />
         <Typo variant="helperText">{items[activeIndex].description}</Typo>
       </div>
     </div>

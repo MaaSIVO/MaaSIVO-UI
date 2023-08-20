@@ -27,8 +27,7 @@ const Template: ComponentStory<typeof SectionHeader> = (args) => (
       position: 'relative',
       alignItems: 'center',
       flexDirection: 'column'
-    }}
-  >
+    }}>
     <SectionHeader {...args} />
   </div>
 );
@@ -37,10 +36,10 @@ export const Left = Template.bind({});
 export const Right = Template.bind({});
 
 Left.args = {
-  title: 'Un Sistema de Transporte Multimodal'
+  title: 'Lorem Ipsum is simply dummy text'
 };
 
 Right.args = {
-  title: 'Un Sistema de Transporte Multimodal',
+  title: 'Lorem Ipsum is simply dummy text',
   align: 'right'
 };
